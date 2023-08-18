@@ -18,5 +18,5 @@
 // })
 function getService(serviceName){
     localStorage.setItem('serviceName',serviceName);
-    location.href='../index.html#contactUs';
+    location.href='../contactus.html';
 }

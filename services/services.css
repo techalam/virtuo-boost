@@ -416,7 +416,7 @@ body::-webkit-scrollbar{
     opacity: 1;
   }
   #detailService{
-    height: 100vh;
+    height: auto;
     width: 100%;
     padding: 3% 2.5% 0 2.5%;
   }
@@ -511,7 +511,7 @@ body::-webkit-scrollbar{
   height: 15vh;
   width: 100%;
   padding: 0.5% 6%; 
-  background-color: rgb(26,26,26);
+  background-color: hsl(0,0%,15%);;
   display: flex;
   align-items: center;
 }

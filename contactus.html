@@ -9,7 +9,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-<body>
+<body onload="onBodyLoad()">
     <nav id="navbar">
         <!-- <img src="img/logo.png" alt=""> -->
         <div id="menuContainer">
@@ -57,9 +57,9 @@
             <div class="footerSections">
                 <h1> SOCIAL MEDIA </h1>
                 <div id="socialLinks">
-                    <a href=""><img src="img/instagram.png" alt=""></a>
-                    <a href=""><img src="img/facebook.png" alt=""></a>
-                    <a href=""><img src="img/twitter.png" alt=""></a>
+                    <a href="https://instagram.com/virtuoboost?igshid=MzRlODBiNWFlZA=="><img src="img/instagram.png" alt=""></a>
+                    <a href="http://facebook.com/VituoBoost"><img src="img/facebook.png" alt=""></a>
+                    <a href="https://twitter.com/VirtuoBoost"><img src="img/twitter.png" alt=""></a>
                 </div>
             </div>
             <div class="footerSections">
@@ -76,7 +76,84 @@
         </div> -->
     </section>
     <script>
+
+        function onBodyLoad(){
+            if(localStorage.getItem('serviceName')){
+                var nameOfService = localStorage.getItem('serviceName');
+                document.querySelector(`#service_name option[value="${nameOfService}"]`).setAttribute('selected','true');
+            }
+            else{
+                console.log("no service found")
+            }
+        }
+
+       function validateForm() {
+            var fromName = document.getElementById("from_name").value;
+            var email = document.getElementById("email_id").value;
+            var service = document.getElementById("service_name").value;
+            var message = document.getElementById("message").value;
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email validation pattern
+
+            if (fromName === "") {
+                swal({
+                    type: "error",
+                    title: "Error",
+                    text: "Please Enter Your Name",
+                    //buttons: false,
+                    timer: 1200
+                })
+                //alert("Please enter your name.");
+                return false;
+            }
+
+            if (!email.match(emailPattern)) {
+                swal({
+                    type: "error",
+                    title: "Error",
+                    text: "Please Enter A Valid Email Address",
+                    //buttons: false,
+                    timer: 1200
+                })
+                return false;
+            } else {
+                document.getElementById("email_id").classList.remove("error");
+            }
+
+            if (service === "select" || service === "") {
+                swal({
+                    type: "error",
+                    title: "Error",
+                    text: "Please Select A Service",
+                    //buttons: false,
+                    timer: 1200
+                })
+                return false;
+            }
+
+            if (message === "") {
+                swal({
+                    type: "error",
+                    title: "Error",
+                    text: "Please Enter A Message",
+                    //buttons: false,
+                    timer: 1200
+                });
+                return false;
+            }
+
+            // Additional validations can be added here
+
+            return true;
+        }
+
+        /*function sendMessage() {
+            if (validateForm()) {
+                alert("Form submitted successfully.");
+            }
+        }*/
+
         function sendMessage(){
+            if (validateForm()) {
             (function(){
                 emailjs.init("N3aHZ2QKAsmJjBlJn");
             })();
@@ -89,9 +166,13 @@
                 message:document.querySelector("#message").value
             }
             emailjs.send(serviceId, templateId, params).then(res=>{
-                swal("Are you sure you want to do this?", {
-  buttons: ["Oh noez!", "Aww yiss!"],
-});
+                swal({
+                    type: "success",
+                    title: "Thank You",
+                    text: "We Will Get Back To You Soon",
+                    //buttons: false,
+                    timer: 1200
+                })
                 document.querySelector("#from_name").value='';
                 document.querySelector("#service_name").value='Select';
                 document.querySelector("#email_id").value='';
@@ -99,6 +180,103 @@
                 localStorage.setItem('serviceName','');
             })
             .catch();
+        }
+
+        }
+        function validateForm() {
+            var fromName = document.getElementById("from_name").value;
+            var email = document.getElementById("email_id").value;
+            var service = document.getElementById("service_name").value;
+            var message = document.getElementById("message").value;
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email validation pattern
+
+            if (fromName === "") {
+                swal({
+                    type: "error",
+                    title: "Error",
+                    text: "Please Enter Your Name",
+                    //buttons: false,
+                    timer: 1200
+                })
+                //alert("Please enter your name.");
+                return false;
+            }
+
+            if (!email.match(emailPattern)) {
+                swal({
+                    type: "error",
+                    title: "Error",
+                    text: "Please Enter A Valid Email Address",
+                    //buttons: false,
+                    timer: 1200
+                })
+                return false;
+            } else {
+                document.getElementById("email_id").classList.remove("error");
+            }
+
+            if (service === "select" || service === "") {
+                swal({
+                    type: "error",
+                    title: "Error",
+                    text: "Please Select A Service",
+                    //buttons: false,
+                    timer: 1200
+                })
+                return false;
+            }
+
+            if (message === "") {
+                swal({
+                    type: "error",
+                    title: "Error",
+                    text: "Please Enter A Message",
+                    //buttons: false,
+                    timer: 1200
+                });
+                return false;
+            }
+
+            // Additional validations can be added here
+
+            return true;
+        }
+
+        /*function sendMessage() {
+            if (validateForm()) {
+                alert("Form submitted successfully.");
+            }
+        }*/
+
+        function sendMessage(){
+            if (validateForm()) {
+            (function(){
+                emailjs.init("N3aHZ2QKAsmJjBlJn");
+            })();
+            var templateId = "template_fd1qqpl";
+            var serviceId = "service_11c9sox";
+            var params = {
+                from_name: document.querySelector("#from_name").value,
+                service:document.querySelector("#service_name").value,
+                email_id:document.querySelector("#email_id").value,
+                message:document.querySelector("#message").value
+            }
+            emailjs.send(serviceId, templateId, params).then(res=>{
+                swal({
+                    type: "success",
+                    title: "Thank You",
+                    text: "We Will Get Back To You Soon",
+                    //buttons: false,
+                    timer: 1200
+                })
+                document.querySelector("#from_name").value='';
+                document.querySelector("#service_name").value='Select';
+                document.querySelector("#email_id").value='';
+                document.querySelector("#message").value='';
+                localStorage.setItem('serviceName','');
+            })
+            .catch();
+        }
 
         }
     </script>

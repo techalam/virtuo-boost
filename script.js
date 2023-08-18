@@ -37,7 +37,7 @@ window.addEventListener('scroll', reveal);
         for(var i =0; i<reveals.length; i++){
             var windowHeight = window.innerHeight;
             var revealTop = reveals[i].getBoundingClientRect().top;
-            var revealPoint = 500;
+            var revealPoint = 300;
             if(revealTop<windowHeight - revealPoint){
                 reveals[i].classList.add('active');
             }
@@ -55,15 +55,7 @@ function onMouseMove(){
 
     })
 }
-function onBodyLoad(){
-    if(localStorage.getItem('serviceName')){
-        var nameOfService = localStorage.getItem('serviceName');
-        document.querySelector(`#service_name option[value="${nameOfService}"]`).setAttribute('selected','true');
-    }
-    else{
-        console.log("no service found")
-    }
-}
+
 
 var tlV = gsap.timeline({
     scrollTrigger:{
