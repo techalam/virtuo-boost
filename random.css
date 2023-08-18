@@ -1,0 +1,48 @@
+.element{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .element:hover h1{
+        transform: translateY(-100%);
+        color: lightgreen;
+        opacity: 1;
+    }
+    .element:hover img{
+        opacity: 0.85;
+        transform: translateY(0%) rotate(0deg);
+    }
+    .element:hover video{
+        opacity: 0.85;
+        transform: translateY(30%) rotate(0deg);
+    }
+    .element img{
+        position: absolute;
+        height: 200%;
+        opacity: 0;
+        filter: drop-shadow(2px 4px 6px black);
+        transition: all ease-out 0.5s;
+        transform: translateY(15%) rotate(5deg);
+    }
+    .element video{
+        position: absolute;
+        height: 350%;
+        opacity: 0;
+        transition: all ease-out 0.5s;
+        transform: translateY(40%) rotate(5deg);
+        filter: drop-shadow(2px 4px 6px black);
+    }
+    #thirdVideo{ transform: translateY(0%) rotate(5deg); }
+    .element:hover #thirdVideo{
+        opacity: 0.85;
+        transform: translateY(-30%) rotate(0deg); 
+    }
+    .element img:first-child{ left: 0; }
+        .element img:nth-child(3){ right: 0; }
+        .element video{ right: 2%; }
+        .text-div{
+            height: 7.5vw;
+            overflow: hidden;
+            text-align: center;
+            z-index: 10; }

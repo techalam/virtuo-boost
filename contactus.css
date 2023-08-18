@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    /* color: #fff; */
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    /* cursor: none; */
+}
+#navbar {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    color: white !important;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(26,26,26,0.5); */
+    padding: 0 4%;
+    gap: 30px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+#menuContainer {
+    display: flex;
+    padding: 2%;
+    gap: 30px;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#menuContainer a {
+    text-decoration: none;
+}
+#navbar h4 {
+    font-weight: lighter;
+    font-family: 'Montserrat', sans-serif;
+    /* opacity: 0; */
+    animation: fadeIn 1s 1s ease-out forwards;
+    letter-spacing: 0.1vw;
+    /* animation-delay: 2s; */
+    color: white;
+}
+#contactUs {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(26,26,26,1), rgba(0,0,0,0.3)), url(./img/contactBack.jpg);
+    background-size: cover;
+    /* filter: drop-shadow(2px 4px 6px black); */
+    display: flex;
+    margin-bottom: 200px;
+}
+.contactParts {
+    width: 50%;
+    height: 100%;
+}
+.contactParts:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1%;
+    padding: 0 8%;
+    filter: drop-shadow(2px 4px 6px black);
+}
+.contactParts:first-child {
+    font-size: 3.5vw;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(2px 2px 2px black);
+    color: white;
+}
+.contactParts span{
+    font-size: 3vw;
+    font-weight: lighter;
+    color: #60ff60;
+}
+.contactParts:last-child h2{
+    font-size: 4vw;
+    color: white;
+    margin-bottom: 3%;
+    font-weight: lighter;
+}
+.contactParts input {
+    padding: 4%;
+    background: transparent;
+    border: 1px solid white;
+    box-shadow: 0 0px 1px white, 0 0px 3px white;
+    color: white;
+    font-size: 1.1em;
+}
+.contactParts select{
+    padding: 4%;
+    background: transparent;
+    border: 1px solid white;
+    box-shadow: 0 0px 1px white, 0 0px 3px white;
+    color: white;
+    font-size: 1.1em;
+}
+#service_name option{
+    background-color: #111;
+}
+.contactParts input::placeholder{
+    color: white;
+}
+.contactParts input[type="Submit"]{
+    margin-top: 2%;
+    background-color: black;
+    color: white;
+    border: none;
+}

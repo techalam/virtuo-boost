@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtuo Boost</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+        <link rel="stylesheet" href="loco.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+        
+</head>
+<body onload="onMouseMove(); onBodyLoad();">
+    <!-- <div id="minicircle"></div> -->
+    <div id="cursor"></div>
+    <!-- <div id="cursorBlur"></div> -->
+    <nav id="navbar">
+        <!-- <img src="img/logo.png" alt=""> -->
+        <div id="menuContainer">
+           <a href="#main"><h4>Home</h4></a>
+            <a href="services/services.html"><h4>Services</h4></a>
+            <a href="aboutus.html"><h4>About us</h4></a>
+            <a href="contactus.html"><h4>Contact us</h4></a>
+            
+        </div>
+    </nav>
+ <div class="container">
+    
+    <!-- <div id="cursor"></div>
+    <div id="cursorBlur"></div> -->
+    <div id="main">
+        <img src="img/mainPageBg.svg"  id="bgImage">
+        <h6 style="position: absolute;transform: rotate(90deg);left: -5%;letter-spacing: 0.2vw;font-size: 1vw; font-weight:lighter;">DELIVER GREAT THINGS</h6>
+        <div id="titleContainer" style="font-size: 3vw;filter: drop-shadow(1px 2px 6px black);width: 53%; display: flex; justify-content: space-around;">
+            <div style=" overflow: hidden; "><h1 id="mainTitle" style=" transition: all 0.5s ease-out;">VIRTUO</h1></div>
+            <div id="subTitle" style="text-align: right; overflow: hidden;">
+                <h1>BO<img src="img/shuttle.png">ST</h1>
+                <p style="font-size: 2.5vw; color: lightgreen;">BOOST . VIRTUAL . PERFORMANCE</p>
+            </div>
+            <!-- <div id="sideBox">
+                <svg><rect></rect></svg>
+            </div> -->
+        </div>
+        <!-- <div id="centerContainer">
+            <h1>BOOST. VIRTUAL. PERFORMANCE</h1>
+            <h2>BREATHE LIFE INTO IDEAS</h2>
+            <div id="sideBox">
+                
+                <svg><rect></rect></svg>
+                <div id="childSideBox">
+                    
+                    <svg><rect></rect></svg>
+                </div>
+            </div>
+            
+            
+        </div> -->
+    </div>
+
+<section id="section1">
+    <video src="img/webVideo.mp4" loop autoplay muted></video>
+    <!-- <img src="img/fBanner1.jpg" alt="" class="reveal"> -->
+
+
+</section>
+
+<section id="section2" class="reveal">
+    <div id="headingText">
+        <h1 class="reveal" style="text-align: center;">WELCOME TO<span> VIRTUO</span> BOOST</h1>
+    </div>
+    <div id="contentText" class="reveal">
+        <p>Empowering Digital Dreams, Elevating Online Realities - Welcome to Virtuo Boost, Where Ideas Soar and Success Takes Flight!</p>
+        <p>Virtuo Boost: Unleashing digital potential with a creative edge. We breathe life into ideas, offering web development, marketing, and graphic design services to elevate your online presence and drive success <br><button style="text-align: center;">About us</button></p>
+    </div>
+    <!-- <img src="img/banner1.jpg" alt=""> -->
+</section>
+<section id="introPage" class="reveal">
+    <div class="element">
+        <img src="img/design3.jpg" alt="">
+        <div class="text-div">
+            <h1>Stunning</h1>
+            <h1>Experiences</h1>
+        </div>
+        <!-- <img src="img/banner1.3.jpg" alt=""> -->
+    <video src="img/design.mp4" loop autoplay muted></video>
+    </div>
+    <div class="element">
+        <video src="img/creativeVideo.mp4" loop autoplay muted style="left: 0; width: 30%;" ></video>
+        <!-- <img src="img/banner1.2.jpg" alt=""> -->
+        <div class="text-div">
+            <h1 id="secondText">Striking</h1>
+            <h1 style="color: lightblue;">Creativity</h1>
+        </div>
+        <img src="img/creative.jpg" alt="">
+    </div>
+    <div class="element">
+        <img src="img/design3.jpg" alt="">
+        <div class="text-div">
+            <h1>Aesthetic</h1>
+            <h1 style="color: lightsalmon;">Realities</h1>
+        </div>
+        <!-- <img src="img/banner1.3.jpg" alt=""> -->
+        <video src="img/design.mp4" loop autoplay muted id="thirdVideo"></video>
+    
+    </div>
+</section>
+<!-- <section id="section3" style="
+    height: 100vh;
+">
+<div class="elem">
+    <h1>WEB DESIGNING</h1>
+    <img src="img/webd.jpg" alt="">
+</div>
+<div class="elem">
+    <h1>GRAPHIC DESIGNING</h1>
+    <img src="img/graphic.jpg" alt="">
+</div>
+<div class="elem">
+    <h1>E-COMMERCE</h1>
+    <img src="img/ecom.jpg" alt="">
+</div>
+<div class="elem">
+    <h1>DIGITAL MARKETING</h1>
+    <img src="img/dm.jpg" alt="">
+</div>
+<div class="elem">
+    <h1>SOCIAL MEDIA</h1>
+    <img src="img/socialMedia.jpg" alt="">
+</div>
+</section> -->
+
+<section id="scrollerSection">
+    <div id="scroller">
+        <div id="scrollerChild">
+            <h4>WEB DESIGNING</h4>
+            <h4>E-COMMERCE</h4>
+            <h4>SEO</h4>
+            <h4>BUSINESS DEVELOPMENT</h4>
+            <h4>GRAPHIC DESIGNING</h4>
+        </div>
+        <div id="scrollerChild">
+            <h4>WEB DESIGNING</h4>
+            <h4>E-COMMERCE</h4>
+            <h4>SEO</h4>
+            <h4>BUSINESS DEVELOPMENT</h4>
+            <h4>GRAPHIC DESIGNING</h4>
+        </div>
+    </div>
+    <div id="scroller">
+        <div id="scrollerChild">
+            <h4>GRAPHIC DESIGNING</h4>
+            <h4>BUSINESS DEVELOPMENT</h4>
+            <h4>SEO</h4>
+            <h4>E-COMMERCE</h4>
+            <h4>WEB DESIGNING</h4>
+        </div>
+        <div id="scrollerChild">
+            <h4>GRAPHIC DESIGNING</h4>
+            <h4>BUSINESS DEVELOPMENT</h4>
+            <h4>SEO</h4>
+            <h4>E-COMMERCE</h4>
+            <h4>WEB DESIGNING</h4>
+        </div>
+    </div>
+    <div id="scroller">
+        <div id="scrollerChild">
+    <h4>WEB DESIGNING</h4>
+    <h4>E-COMMERCE</h4>
+    <h4>SEO</h4>
+    <h4>BUSINESS DEVELOPMENT</h4>
+    <h4>GRAPHIC DESIGNING</h4>
+        </div>
+        <div id="scrollerChild">
+            <h4>WEB DESIGNING</h4>
+            <h4>E-COMMERCE</h4>
+            <h4>SEO</h4>
+            <h4>BUSINESS DEVELOPMENT</h4>
+            <h4>GRAPHIC DESIGNING</h4>
+        </div>
+    </div>
+</section>
+<section id="carouselServices">
+    
+    <div id="bgImagesContainer">
+        <div class="backgrounds webdBg">
+            <div class="headingBgContainer">
+                <h1>WEBSITE <br><span>DEVEL</span>OPMENT</h1>
+                <p>There are millions of fish in the sea, but we only know about a small portion of them. Similarly there are many business owners on the market, but very few have succeeded in maintaining a positive reputation with their clients. You can stand out with the aid of our analytics team. This includes identification and optimization of website elements such as meta tags, headings, URLs, and content to make them more search engine-friendly and improves ranking potential.
+                    Additionally, it entails the use of analytical tools to track website metrics and to gather data on their competitors in order to offer improvement strategies.
+                    </p>
+                    <button>KNOW MORE...</button>
+            </div>
+        </div>
+        <div class="backgrounds seoBg">
+            <div class="headingBgContainer">
+                <h1>SEARCH ENGINE <span>OPTIM</span>IZATION</h1>
+                <p>There are millions of fish in the sea, but we only know about a small portion of them. Similarly there are many business owners on the market, but very few have succeeded in maintaining a positive reputation with their clients. You can stand out with the aid of our analytics team. This includes identification and optimization of website elements such as meta tags, headings, URLs, and content to make them more search engine-friendly and improves ranking potential.
+                    Additionally, it entails the use of analytical tools to track website metrics and to gather data on their competitors in order to offer improvement strategies.
+                    </p>
+                    <button>KNOW MORE...</button>
+            </div>
+        </div>
+        
+        <div class="backgrounds graphicBg">
+            <div class="headingBgContainer">
+                <h1>GRAPHIC <br><span>DESIG</span>NING</h1>
+                <p>There are millions of fish in the sea, but we only know about a small portion of them. Similarly there are many business owners on the market, but very few have succeeded in maintaining a positive reputation with their clients. You can stand out with the aid of our analytics team. This includes identification and optimization of website elements such as meta tags, headings, URLs, and content to make them more search engine-friendly and improves ranking potential.
+                    Additionally, it entails the use of analytical tools to track website metrics and to gather data on their competitors in order to offer improvement strategies.
+                    </p>
+                    <button>KNOW MORE...</button>
+            </div>
+        </div>
+        <div class="backgrounds businessBg">
+            <div class="headingBgContainer">
+                <h1>BUSINESS <br><span>DEVEL</span>OPMENT</h1>
+                <p>There are millions of fish in the sea, but we only know about a small portion of them. Similarly there are many business owners on the market, but very few have succeeded in maintaining a positive reputation with their clients. You can stand out with the aid of our analytics team. This includes identification and optimization of website elements such as meta tags, headings, URLs, and content to make them more search engine-friendly and improves ranking potential.
+                    Additionally, it entails the use of analytical tools to track website metrics and to gather data on their competitors in order to offer improvement strategies.
+                    </p>
+                    <button>KNOW MORE...</button>
+            </div>
+        </div>
+        <div class="backgrounds socialBg">
+            <div class="headingBgContainer">
+                <h1>SOCIAL MEDIA<br><span>MANAG</span>EMENT</h1>
+                <p>There are millions of fish in the sea, but we only know about a small portion of them. Similarly there are many business owners on the market, but very few have succeeded in maintaining a positive reputation with their clients. You can stand out with the aid of our analytics team. This includes identification and optimization of website elements such as meta tags, headings, URLs, and content to make them more search engine-friendly and improves ranking potential.
+                    Additionally, it entails the use of analytical tools to track website metrics and to gather data on their competitors in order to offer improvement strategies.
+                    </p>
+                    <button>KNOW MORE...</button>
+            </div>
+        </div>
+    </div>
+    <div class="contentLayer">
+        <div id="contentParts">
+            <img src="img/WebDPortrait.svg" alt="" class="carouselImgs">
+            <img src="img/SocialPortrait.svg" alt="" class="carouselImgs">
+            <img src="img/GraphicsPortrait.svg" alt="" class="carouselImgs">
+            <img src="img/BDPPortrait.svg" alt="" class="carouselImgs">
+            <img src="img/SSMPortrait.svg" alt="" class="carouselImgs">
+        </div>
+    </div>
+    <div class="runCarouselButtons">
+        <button id="runCarouselBack" class="moveCarouselButtons" onclick="runCarouselBack()"><i class="fa-solid fa-chevron-right fa-rotate-180 fa-2xl" style="color: #ffffff;"></i></button>
+        <button id="runCarousel" class="moveCarouselButtons" onclick="runCarousel()"><i class="fa-solid fa-chevron-right fa-2xl" style="color: #ffffff;"></i></button>
+    </div>
+    <p id="nameTagOnTop">VIRTUO BOOST</p>
+    </section>
+<section id="section4" class="reveal">
+    
+    <div>
+            <h1 style="text-align: center;-webkit-text-stroke: 1px white;padding-top: 3%;font-size: 4vw;font-weight: lighter;">ABOUT US</h1>
+        </div><p style="
+        color: white;
+        text-align: center;
+        margin-top: 3%;
+        width: 80%;
+        margin: 2% auto;
+        font-size: 1.2em;
+    ">At Virtuo Boost, we are thrilled to kickstart our journey as an innovative digital marketing agency. As a newly launched venture, we bring fresh perspectives and are unafraid to exlpore new horizons in order to help businesses unlock to their full potential in this  digital world.  Virtuo Boost is a team of dedicated experts who aim at delivering data-driven yet creative strategies to elevate your online presence. 
+    We have a vision of creating a space where businesses of all sizes can thrive-in in this ever-evolving digital landscape.   We truly believe that every client has a unique story that needs to be narrated to their target audience.
+    We consider our clients as partners and work hand in hand with you to achieve exceptional results and measurable growth. Our mission is to empower businesses across various industries in order to achieve their desired results. 
+    Our commitment is to provide digital marketing solutions that fuel your growth.
+    We invite you to be part of our journey. Let's collaborate and create a success story together
+    </p>
+    
+    </section>
+
+<section id="contactUs">
+    <div class="contactParts">
+        <h2 style=" text-align: center;">Embrace the connection,</h2> <span>we're here for you</span>
+    </div>
+    <div class="contactParts">
+        <h2>CONTACT US</h2>
+        <input type="text" placeholder="Enter Your Name"  id="from_name" name="from_name">
+        <input type="text" placeholder="Enter Your Email Address" id="email_id" name="email_id">
+        <select name="service" id="service_name" name="service_name">
+            <option value="select" disabled selected>Select</option>
+            <option value="social">Social Media</option>
+            <option value="graphic">Graphic Designing</option>
+            <option value="webd">Web Designing</option>
+            <option value="seo">SEO</option>
+            <option value="business">Business</option>
+        </select>
+        <input type="text" placeholder="Message" id="message" name="message">
+        <input type="Submit" placeholder="Submit" onclick="sendMessage();">
+    </div>
+</section>
+<section id="footer">
+    <div class="upperFooter">
+        <div class="footerSections">
+        <h1><span style="border-bottom: 2px solid lightgreen;padding-bottom:2%;">VIRTU</span>O BOOST </h1>
+        <p>Navigating Success Through Digital Marketing Expertise</p>
+        </div>
+        <div class="footerSections">
+            <h1>QUICK LINKS</h1>
+            <div>
+                <a href="services/services.html"><p>Our Services</p></a>
+                <a href="contactus.html"><p>Contact Us</p></a>
+                <a href="aboutus.html"><p>About Us</p></a>
+            </div>
+        </div>
+        <div class="footerSections">
+            <h1> SOCIAL MEDIA </h1>
+            <div id="socialLinks">
+                <a href=""><img src="img/instagram.png" alt=""></a>
+                <a href=""><img src="img/facebook.png" alt=""></a>
+                <a href=""><img src="img/twitter.png" alt=""></a>
+            </div>
+        </div>
+        <div class="footerSections">
+            <h1>Contact</h1>
+            <div>
+                <p>+91756374859</p>
+                <p>info@virtuoboost.com</p>
+                <p> © 2023 Virtuo boost. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="lowerFooter">
+       
+    </div> -->
+</section>
+
+
+ </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        function sendMessage(){
+            (function(){
+                emailjs.init("N3aHZ2QKAsmJjBlJn");
+            })();
+            var templateId = "template_fd1qqpl";
+            var serviceId = "service_11c9sox";
+            var params = {
+                from_name: document.querySelector("#from_name").value,
+                service:document.querySelector("#service_name").value,
+                email_id:document.querySelector("#email_id").value,
+                message:document.querySelector("#message").value
+            }
+            emailjs.send(serviceId, templateId, params).then(res=>{
+                swal("Are you sure you want to do this?", {
+  buttons: ["Oh noez!", "Aww yiss!"],
+});
+                document.querySelector("#from_name").value='';
+                document.querySelector("#service_name").value='Select';
+                document.querySelector("#email_id").value='';
+                document.querySelector("#message").value='';
+                localStorage.setItem('serviceName','');
+            })
+            .catch();
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contactus.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <nav id="navbar">
+        <!-- <img src="img/logo.png" alt=""> -->
+        <div id="menuContainer">
+            <a href="/index.html"><h4>Home</h4></a>
+            <a href="/services/services.html"><h4>Services</h4></a>
+            <a href="/aboutus.html"><h4>About us</h4></a>
+            <a href=""><h4>Contact us</h4></a>
+            
+        </div>
+    </nav>
+    <section id="contactUs">
+        <div class="contactParts">
+            <h2 style=" text-align: center;">Embrace the connection,</h2> <span>we're here for you</span>
+        </div>
+        <div class="contactParts">
+            <h2>CONTACT US</h2>
+            <input type="text" placeholder="Enter Your Name"  id="from_name" name="from_name">
+            <input type="text" placeholder="Enter Your Email Address" id="email_id" name="email_id">
+            <select name="service" id="service_name" name="service_name">
+                <option value="select" disabled selected>Select</option>
+                <option value="social">Social Media</option>
+                <option value="graphic">Graphic Designing</option>
+                <option value="webd">Web Designing</option>
+                <option value="seo">SEO</option>
+                <option value="business">Business</option>
+            </select>
+            <input type="text" placeholder="Message" id="message" name="message">
+            <input type="Submit" placeholder="Submit" onclick="sendMessage();">
+        </div>
+    </section>
+    <script>
+        function sendMessage(){
+            (function(){
+                emailjs.init("N3aHZ2QKAsmJjBlJn");
+            })();
+            var templateId = "template_fd1qqpl";
+            var serviceId = "service_11c9sox";
+            var params = {
+                from_name: document.querySelector("#from_name").value,
+                service:document.querySelector("#service_name").value,
+                email_id:document.querySelector("#email_id").value,
+                message:document.querySelector("#message").value
+            }
+            emailjs.send(serviceId, templateId, params).then(res=>{
+                swal("Are you sure you want to do this?", {
+  buttons: ["Oh noez!", "Aww yiss!"],
+});
+                document.querySelector("#from_name").value='';
+                document.querySelector("#service_name").value='Select';
+                document.querySelector("#email_id").value='';
+                document.querySelector("#message").value='';
+                localStorage.setItem('serviceName','');
+            })
+            .catch();
+
+        }
+    </script>
+</body>
+</html>
