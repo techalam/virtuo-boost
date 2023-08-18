@@ -98,8 +98,8 @@ var tl3 = gsap.timeline({
         trigger:".container",
         scroller:".container",
         // markers:true,
-        start:"top -235%",
-        end:"top -240%",
+        start:"top -255%",
+        end:"top -260%",
         scrub:3
     }
 });
@@ -143,38 +143,6 @@ document.querySelectorAll(".elem").forEach(elem=>{
     });
 });
 
-
-// function runCarousel(action){
-    
-
-// // Append the images with a slight delay to allow the class to take effect
-// if(action == "append"){
-//     const firstImgServiceSection = document.querySelector('.serviceSections .imgTextContainer:first-child');
-// const firstImgFullContainer = document.querySelector('.fullContainer img:first-child');
-
-// // Add the smooth-transition class to the images
-// firstImgServiceSection.classList.add('smooth-transition');
-// firstImgFullContainer.classList.add('smooth-transition');
-
-//     setTimeout(() => {
-//       document.querySelectorAll('.serviceSections')[0].append(firstImgServiceSection);
-//       document.querySelectorAll('.fullContainer')[0].append(firstImgFullContainer);
-//     }, 10);
-// }
-// else{
-//     const firstImgServiceSection = document.querySelector('.serviceSections .imgTextContainer:last-child');
-// const firstImgFullContainer = document.querySelector('.fullContainer img:last-child');
-// firstImgServiceSection.classList.add('smooth-transition');
-// firstImgFullContainer.classList.add('smooth-transition');
-//     setTimeout(() => {
-//         document.querySelectorAll('.serviceSections')[0].prepend(firstImgServiceSection);
-//         document.querySelectorAll('.fullContainer')[0].prepend(firstImgFullContainer);
-//       }, 10);
-// }
-
-
-// }
-//  run carousel
 var currentSlide = 0;
 
 function runCarousel(){

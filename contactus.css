@@ -18,12 +18,15 @@ html,body{
     color: white !important;
     justify-content: center;
     align-items: center;
-    /* background-color: rgb(26,26,26,0.5); */
+    background-color: rgb(26,26,26,0.5);
     padding: 0 4%;
     gap: 30px;
     position: fixed;
     top: 0;
     z-index: 1;
+}
+body::-webkit-scrollbar{
+    display: none;
 }
 #menuContainer {
     display: flex;
@@ -53,7 +56,7 @@ html,body{
     background-size: cover;
     /* filter: drop-shadow(2px 4px 6px black); */
     display: flex;
-    margin-bottom: 200px;
+    /* margin-bottom: 200px; */
 }
 .contactParts {
     width: 50%;
@@ -115,4 +118,60 @@ html,body{
     background-color: black;
     color: white;
     border: none;
+}
+#footer{
+    height: 15vh;
+    width: 100%;
+    padding: 0.5% 6%; 
+    background-color: rgb(26,26,26);
+    display: flex;
+    align-items: center;
+}
+.upperFooter{
+height: 80%;
+width: 100%;
+display: flex;
+    justify-content: space-around;
+}
+.lowerFooter{
+    height: 20%;
+    width: 100%;
+    /* border-top: 1px solid white; */
+    color: #fff;
+    text-align: center;
+}
+.footerSections{
+    height: 100%;
+    width: 20%;
+    /* background-color: lightblue; */
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+}
+.footerSections a{
+    text-decoration: none;
+}
+.footerSections h1{
+    color: white;
+    font-size: 1.5vw;
+    font-weight: lighter;
+    filter: drop-shadow(0px 0px 4px black) brightness(0.9);
+}
+.footerSections p{
+    color: white;
+    font-size: 0.9vw;
+    filter: brightness(0.9);
+
+}
+#socialLinks{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    gap: 3%;
+}
+#socialLinks a img{
+    height: 100%;
 }

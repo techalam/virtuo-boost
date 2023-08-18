@@ -21,33 +21,19 @@ body::-webkit-scrollbar{
     display: none;
 }
 
-#navbar{
+#navbar {
     height: 70px;
     width: 100%;
     display: flex;
     color: white !important;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background-color: hsl(0,0%,15%,1);
+    background-color: hsl(0,0%,15%);
     padding: 0 4%;
     gap: 30px;
     position: fixed;
     top: 0;
     z-index: 1;
-}
-#navbar h4{
-    font-weight: lighter;
-    font-family: 'Montserrat', sans-serif;
-    /* opacity: 0; */
-    /* animation: fadeInMenu 1s ease-in-out forwards; */
-    /* animation-delay: 2s; */
-    color: white;
-}
-#navbar img{
-    height: 45px;
-    /* opacity: 0; */
-    /* animation: fadeInMenu 1s ease-in-out forwards; */
-    /* animation-delay: 5s; */
 }
 #menuContainer {
     display: flex;
@@ -58,10 +44,18 @@ body::-webkit-scrollbar{
     display: flex;
     justify-content: center;
 }
-#menuContainer a{
-  text-decoration: none;
+#menuContainer a {
+    text-decoration: none;
 }
-
+#navbar h4 {
+    font-weight: lighter;
+    font-family: 'Montserrat', sans-serif;
+    /* opacity: 0; */
+    animation: fadeIn 1s 1s ease-out forwards;
+    letter-spacing: 0.1vw;
+    /* animation-delay: 2s; */
+    color: white;
+}
 #main{
     height: 100vh;
     width: 100%;
@@ -339,6 +333,45 @@ body::-webkit-scrollbar{
   #website .neon-button:hover::after, #bdp .neon-button:focus::after {
     opacity: 1;
   }
+  /* SEO */
+  #searchEO{
+    padding-top: 10%;
+  }
+  #searchEO .neon-button {
+    color: lightcoral !important;
+    border: lightcoral .125em solid !important;
+    box-shadow:
+      inset 0 0 0.5em 0 lightcoral,
+      0 0 0.5em 0 lightcoral;
+  }
+  #searchEO .neon-button::before{
+    background: lightcoral !important;
+
+  }
+  #searchEO .neon-button:hover, #searchEO .neon-button:focus{
+    background: lightcoral !important;
+    color: #0C0F0A !important; 
+  }
+  #searchEO .neon-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 2em 0.5em lightcoral;
+    background-color: lightcoral;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 100ms linear;
+  }
+  
+  #searchEO .neon-button:hover::before, #searchEO .neon-button:focus::before {
+    opacity: 1;
+  }
+  #searchEO .neon-button:hover::after, #searchEO .neon-button:focus::after {
+    opacity: 1;
+  }
 
 
   .neon-button::before {
@@ -389,7 +422,7 @@ body::-webkit-scrollbar{
   }
   #detailService h1{
     font-family: 'Orbitron', sans-serif;
-    font-size: 4vw;
+    font-size: 3.5vw;
     font-weight: 900;
     width: 30%;
     opacity: 0.9;
@@ -451,6 +484,11 @@ body::-webkit-scrollbar{
     font-family: 'Orbitron', sans-serif; 
     color: lightgoldenrodyellow !important; 
 }
+.seperateServiceasection:nth-child(5) .detailPointsContainer p b{
+  font-size: 1.5vw;
+  font-family: 'Orbitron', sans-serif; 
+  color: lightcoral !important; 
+}
 .seperateServiceasection:nth-child(2){
     padding-top: 10%;
 }
@@ -467,4 +505,61 @@ body::-webkit-scrollbar{
     opacity: 1 !important;
     padding-top: 3% !important;
     
+}
+/* footer */
+#footer{
+  height: 15vh;
+  width: 100%;
+  padding: 0.5% 6%; 
+  background-color: rgb(26,26,26);
+  display: flex;
+  align-items: center;
+}
+.upperFooter{
+height: 80%;
+width: 100%;
+display: flex;
+  justify-content: space-around;
+}
+.lowerFooter{
+  height: 20%;
+  width: 100%;
+  /* border-top: 1px solid white; */
+  color: #fff;
+  text-align: center;
+}
+.footerSections{
+  height: 100%;
+  width: 20%;
+  /* background-color: lightblue; */
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+}
+.footerSections a{
+  text-decoration: none;
+}
+.footerSections h1{
+  color: white;
+  font-size: 1.5vw;
+  font-weight: lighter;
+  filter: drop-shadow(0px 0px 4px black) brightness(0.9);
+}
+.footerSections p{
+  color: white;
+  font-size: 0.9vw;
+  filter: brightness(0.9);
+
+}
+#socialLinks{
+  height: 30%;
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  gap: 3%;
+}
+#socialLinks a img{
+  height: 100%;
 }

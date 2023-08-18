@@ -67,7 +67,7 @@ html,body{
     color: white !important;
     justify-content: center;
     align-items: center;
-    /* background-color: rgb(26,26,26,0.5); */
+    background-color: rgb(26,26,26,0.5);
     padding: 0 4%;
     gap: 30px;
     position: fixed;
@@ -635,9 +635,9 @@ html,body{
     color: black;
 }
 #footer{
-    height: 20vh;
+    height: 15vh;
     width: 100%;
-    padding: 1% 6%; 
+    padding: 0.5% 6%; 
     background-color: rgb(26,26,26);
     display: flex;
     align-items: center;
