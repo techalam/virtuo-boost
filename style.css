@@ -352,7 +352,7 @@ html,body{
     margin-top: 10vw;
 }
 #section2{
-    min-height: 80vh;
+    min-height: 75vh;
     width: 100%;
     padding-top: 3%;
     /* border-bottom: 2px solid #ccc; */
@@ -718,7 +718,7 @@ display: flex;
 }
 .element img{
     position: absolute;
-    height: 200%;
+    height: 300%;
     opacity: 0;
     filter: drop-shadow(2px 4px 6px black);
     transition: all ease-out 0.5s;
@@ -772,7 +772,7 @@ left: 0;
     transition: all ease-out 0.5s;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
-    filter: drop-shadow(2px 4px 6px black);
+    filter: drop-shadow(2px 2px 2px black);
     opacity: 0.9;
 }
 #subTitle img{
