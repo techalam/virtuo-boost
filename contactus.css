@@ -175,3 +175,45 @@ display: flex;
 #socialLinks a img{
     height: 100%;
 }
+
+@media only screen and (min-width: 350px) and (max-width: 1024px) { 
+    #contactUs {
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+    }
+    .contactParts {
+        width: 100%;
+        height: unset;
+    }
+    .contactParts span {
+        font-size: 6vw;
+    }
+    .contactParts:first-child {
+        font-size: 4.5vw;
+    }
+    .contactParts:last-child h2 {
+        text-align: center;
+    }
+    
+    #footer {
+        height: unset !important;
+    }
+    .upperFooter {
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+    .footerSections {
+        min-width: 50%;
+        min-height: 50px;
+    }
+    .footerSections h1 {
+        font-size: 3.5vw;
+    }
+    #socialLinks a img {
+        height: 30px;
+    }
+    .footerSections p {
+        font-size: 2vw;
+    }
+}

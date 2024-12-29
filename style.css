@@ -1243,4 +1243,25 @@ img.carouselImgs {
     #section4 p {
         font-size: 4vw !important;
     }
+    /* footer */
+    #footer {
+        height: unset !important;
+    }
+    .upperFooter {
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+    .footerSections {
+        min-width: 50%;
+        min-height: 50px;
+    }
+    .footerSections h1 {
+        font-size: 3.5vw;
+    }
+    #socialLinks a img {
+        height: 30px;
+    }
+    .footerSections p {
+        font-size: 2vw;
+    }
 }

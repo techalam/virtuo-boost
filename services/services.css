@@ -563,3 +563,60 @@ display: flex;
 #socialLinks a img{
   height: 100%;
 }
+
+@media only screen and (min-width: 350px) and (max-width: 1024px) { 
+  #titleSecondContainer {
+    display: none;
+  }
+  #titleFirstContainer {
+    width: 100%;
+  }
+  #titleFirstContainer {
+    align-items: center;
+  }
+  #main h1 {
+    font-size: 15vw;
+    /* margin-top: 20px; */
+  }
+  #main p span {
+    font-size: 10vw !important;
+  }
+  #main p {
+    font-size: 5vw !important;
+  }
+  .neon-button {
+    font-size: 2rem;
+    width: 80% !important;
+  }
+  b {
+    font-size: 6vw !important;
+  }
+  .reveal.active p {
+    font-size: 3.5vw !important;
+  }
+  .reveal.active h1 {
+    width: 100% !important;
+    font-size: 10vw !important;
+    margin-bottom: 20px;
+  }
+  #footer {
+    height: unset !important;
+}
+.upperFooter {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+}
+.footerSections {
+    min-width: 50%;
+    min-height: 50px;
+}
+.footerSections h1 {
+    font-size: 3.5vw;
+}
+#socialLinks a img {
+    height: 30px;
+}
+.footerSections p {
+    font-size: 2vw;
+}
+}
